@@ -48,7 +48,7 @@ const Reviews = () => {
   };
 
   const prevReview = () => {
-    setIndex((prev) => checkIndex(prev + 1));
+    setIndex((prev) => checkIndex(prev - 1));
   };
 
   const nextReview = () => {
@@ -66,9 +66,9 @@ const Reviews = () => {
     <div>
       <div className="review">
         <img src={image} alt={name} className="person-img" />
-        <h4 className="author" id={`author-${id}`}>
+        <p className="author" id={`author-${id}`}>
           {name}
-        </h4>
+        </p>
         <p className="job">{job}</p>
         <p className="info">{text}</p>
         <div className="button-container">
